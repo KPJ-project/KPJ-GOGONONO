@@ -1,0 +1,33 @@
+#######################################################
+#Front
+#android
+#######################################################
+
+# Windows thumbnail db
+Thumbs.db
+# built application files
+*.apk
+*.ap_
+# generated files
+bin/
+gen/
+build/
+# Local configuration file (sdk path, etc)
+local.properties
+# Android Studio
+.idea
+.gradle
+/*/local.properties
+/*/out
+/*/*/build
+build
+/*/*/production
+*.iml
+*.iws
+*.ipr
+*~
+*.swp
+#######################################################
+#Front
+#android
+#######################################################

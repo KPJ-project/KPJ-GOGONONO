@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="true"
+    android:background="#f7f3e6"
+    tools:context=".RegisterActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <ImageView
+            android:id="@+id/imageView_logo"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/logo_selector"
+            android:padding="5dp"
+            app:srcCompat="@drawable/logo_new" />
+
+        <ImageView
+            android:id="@+id/imageView_signupbox"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="130dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/signup_box" />
+
+        <EditText
+            android:id="@+id/editText_id"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="220dp"
+            android:ems="10"
+            android:hint="이메일 - example@email.com"
+            android:inputType="textPersonName"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/editText_password"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText_id"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:hint="패스워드 - 8자리 이상"
+            android:inputType="textPassword"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/editText_confirmpassword"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText_password"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:hint="패스워드 확인"
+            android:inputType="textPassword"
+            android:textSize="15dp" />
+
+
+        <Button
+            android:id="@+id/button_next"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/imageView_signupbox"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/button_login"
+            android:text="다음"
+            android:textColor="#ffffff"
+            android:textSize="20dp" />
+
+    </RelativeLayout>
+
+
+</ScrollView>

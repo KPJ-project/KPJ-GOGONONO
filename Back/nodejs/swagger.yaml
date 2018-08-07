@@ -1,0 +1,13 @@
+---
+swagger: "2.0"
+info:
+  description: "This is a Api Test For GOGONONO."
+  version: "1.0.0"
+  title: "GOGONONO"
+host: "localhost:3000"
+basePath: "/"
+tags:
+- name : "gogonono"
+  description : "Test For gogonono"
+schemes:
+- "http"

@@ -1,5 +1,10 @@
 var express = require('express');
+var YAML = require('yamljs');
+var swaggerUi = require('swagger-ui-express');
+var swaggerDocument = YAML.load('./swagger.yaml');
 var app = express();
+
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.set('port',3000);
 

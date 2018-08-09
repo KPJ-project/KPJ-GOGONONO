@@ -46,14 +46,14 @@ CREATE TABLE Users
 (
     `RawID`          INT             NOT NULL    AUTO_INCREMENT COMMENT 'PK', 
     `UserName`       VARCHAR(45)     NOT NULL    COMMENT '이름', 
-    `E-Mail`         VARCHAR(45)     NOT NULL    COMMENT 'Email', 
+    `EMail`         VARCHAR(45)     NOT NULL    COMMENT 'Email', 
     `Password`       VARCHAR(45)     NOT NULL    COMMENT '비밀번호', 
     `NickName`       VARCHAR(45)     NOT NULL    COMMENT '닉네임', 
     `ClubName`       VARCHAR(45)     NOT NULL    COMMENT '소모임명', 
     `RankName`       VARCHAR(45)     NOT NULL    COMMENT '등급명', 
-    `RegDate`        DATETIME        NOT NULL    COMMENT '등록일자', 
     `ETC`            VARCHAR(45)     NULL        COMMENT 'ETC', 
     `Image`          VARCHAR(200)    NULL        COMMENT '이미지', 
+	`RegDate`        DATETIME        NOT NULL    COMMENT '등록일자', 
     `UpdateDate`     DATETIME        NOT NULL    COMMENT '업데이트일자', 
     `LastLoginDate`  DATETIME        NOT NULL    COMMENT '마지막접속시간', 
     PRIMARY KEY (RawID)

@@ -1,20 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ImageView
+        android:id="@+id/imageView_logo"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/logo_selector"
+        android:padding="5dp"
+        app:srcCompat="@drawable/logo_new" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textView_logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="MainFragment"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</android.support.constraint.ConstraintLayout>
+        android:layout_below="@+id/imageView_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="모임 리스트"
+        android:textColor="#ffffff"
+        android:textSize="20dp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/textView_logo"/>
 
 
+
+
+    <android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/layout_1"
+            android:background="#4caf50"
+            app:layout_heightPercent="35%"
+            app:layout_widthPercent="100%">
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_2"
+            android:layout_below="@+id/layout_1"
+            android:background="#ededed"
+            app:layout_heightPercent="65%"
+            app:layout_widthPercent="100%">
+
+        </RelativeLayout>
+    </android.support.percent.PercentRelativeLayout>
+
+</RelativeLayout>

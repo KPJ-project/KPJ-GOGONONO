@@ -1,0 +1,110 @@
+-- 데이터베이스 및 테이블 생성 쿼리 
+-- 데이터베이스 명, 테이블 명, 컬럼명 변경요청은 언제든 환영.
+
+create database gogonono default character set utf8mb4;
+
+use gogonono;
+
+CREATE TABLE VotesJoin
+(
+    `RawID`       INT         NOT NULL    AUTO_INCREMENT COMMENT 'PK', 
+    `VoteID`      INT         NOT NULL	UNIQUE    COMMENT '투표ID', 
+    `IsVoting`    INT         NOT NULL    COMMENT '투표여부', 
+    `UserID`      INT         NOT NULL    COMMENT '참가자ID', 
+    `RegDate`     DATETIME    NOT NULL    COMMENT '등록일자', 
+    `UpdateDate`  DATETIME    NOT NULL    COMMENT '업데이트일자', 
+    PRIMARY KEY (RawID)
+);
+
+ALTER TABLE VotesJoin COMMENT '투표 참가 리스트 테이블';
+
+
+-- Users Table Create SQL
+CREATE TABLE Users
+(
+    `RawID`       INT             NOT NULL    AUTO_INCREMENT COMMENT 'PK', 
+    `UserName`    VARCHAR(45)     NOT NULL    COMMENT '이름', 
+    `E-Mail`      VARCHAR(45)     NOT NULL    COMMENT 'Email', 
+    `Password`    VARCHAR(45)     NOT NULL    COMMENT '비밀번호', 
+    `NickName`    VARCHAR(45)     NOT NULL    COMMENT '닉네임', 
+    `ClubID`      INT             NOT NULL	UNIQUE    COMMENT '소모임ID', 
+    `RankName`    VARCHAR(45)     NOT NULL    COMMENT '등급명', 
+    `RegDate`     DATETIME        NOT NULL    COMMENT '등록일자', 
+    `UpdateDate`  DATETIME        NOT NULL    COMMENT '업데이트일자', 
+    `ETC`         VARCHAR(45)     NULL        COMMENT 'ETC', 
+    `Image`       VARCHAR(200)    NULL        COMMENT '이미지', 
+    PRIMARY KEY (RawID)
+);
+
+ALTER TABLE Users COMMENT '유저 테이블';
+
+
+-- Votes Table Create SQL
+CREATE TABLE Votes
+(
+    `RawID`       INT             NOT NULL    AUTO_INCREMENT COMMENT 'PK', 
+    `VoteName`    VARCHAR(45)     NOT NULL    COMMENT '투표명', 
+    `UserID`      VARCHAR(45)     NOT NULL    COMMENT '생성자ID', 
+    `IsComplete`  BIT             NOT NULL    COMMENT '완료여부', 
+    `ETC`         VARCHAR(200)    NOT NULL    COMMENT '비고', 
+    `EndDate`     DATETIME        NOT NULL    COMMENT '종료일자', 
+    `RegDate`     DATETIME        NOT NULL    COMMENT '등록일자', 
+    `UpdateDate`  DATETIME        NOT NULL    COMMENT '업데이트일자', 
+    `GroupID`     INT             NOT NULL	UNIQUE    COMMENT '모임ID', 
+    PRIMARY KEY (RawID)
+);
+
+ALTER TABLE Votes COMMENT '투표 테이블';
+
+ALTER TABLE Votes ADD CONSTRAINT FK_Votes_RawID_VotesJoin_VoteID FOREIGN KEY (RawID)
+ REFERENCES VotesJoin (VoteID)  ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+
+-- KP_Clubs Table Create SQL
+CREATE TABLE KP_Clubs
+(
+    `RawID`       INT             NOT NULL    AUTO_INCREMENT COMMENT 'PK', 
+    `ClubName`    VARCHAR(45)     NOT NULL    COMMENT '소모임명', 
+    `ClubIntro`   VARCHAR(200)    NULL        COMMENT '소모임소개', 
+    `RegDate`     DATETIME        NOT NULL    COMMENT '등록일자', 
+    `UpdateDate`  DATETIME        NOT NULL    COMMENT '업데이트일자', 
+    PRIMARY KEY (RawID)
+);
+
+ALTER TABLE KP_Clubs COMMENT '광풍연 소모임 테이블';
+
+ALTER TABLE KP_Clubs ADD CONSTRAINT FK_KP_Clubs_RawID_Users_ClubID FOREIGN KEY (RawID)
+ REFERENCES Users (ClubID)  ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+
+-- PushLogs Table Create SQL
+CREATE TABLE PushLogs
+(
+    `RawID`       INT         NOT NULL    AUTO_INCREMENT COMMENT 'PK', 
+    `UserID`      INT         NOT NULL    COMMENT '유저ID', 
+    `VoteID`      INT         NOT NULL    COMMENT '투표ID', 
+    `RegDate`     DATETIME    NOT NULL    COMMENT '등록일자(푸쉬시간)', 
+    `UpdateDate`  DATETIME    NOT NULL    COMMENT '업데이트일자', 
+    PRIMARY KEY (RawID)
+);
+
+ALTER TABLE PushLogs COMMENT '푸쉬 로그 테이블';
+
+
+-- KP_Groups Table Create SQL
+CREATE TABLE KP_Groups
+(
+    `RawID`       INT            NOT NULL    AUTO_INCREMENT COMMENT 'PK', 
+    `GroupName`   VARCHAR(10)    NOT NULL    COMMENT '모임명', 
+    `GroupCode`   VARCHAR(6)     NOT NULL    COMMENT '모임코드', 
+    `RegDate`     DATETIME       NOT NULL    COMMENT '등록일자', 
+    `UpdateDate`  DATETIME       NOT NULL    COMMENT '업데이트일자', 
+    PRIMARY KEY (RawID)
+);
+
+ALTER TABLE KP_Groups COMMENT '모임 테이블';
+
+ALTER TABLE KP_Groups ADD CONSTRAINT FK_KP_Groups_RawID_Votes_GroupID FOREIGN KEY (RawID)
+ REFERENCES Votes (GroupID)  ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+

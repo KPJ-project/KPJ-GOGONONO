@@ -17,5 +17,21 @@ router.get('/', function(req, res){
     });
 });
 
+router.post('/login/', function(req, res){
+    console.log(req.body.email);
+    var email = req.body.email;
+
+    var selectQuery = "select * from users where email = '" + email+ "';";
+
+    conn.query(selectQuery, function(err, rows) {
+        if(err){
+            console.log(selectQuery);
+            res.send(err);
+        }
+
+        res.send(rows);
+    });
+});
+
 
 module.exports = router;

@@ -2,8 +2,11 @@ var express = require('express');
 var YAML = require('yamljs');
 var swaggerUi = require('swagger-ui-express');
 var swaggerDocument = YAML.load('./swagger.yaml');
+var bodyParser = require('body-parser');
 var app = express();
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.set('port',3000);

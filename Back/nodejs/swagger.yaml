@@ -31,9 +31,48 @@ paths:
       - "application/json"
       - "application/xml"
       responses:
-        200:
-          schema:
-            type: "object"
+        '200':
+          description: OK
+        '400':
+          description: Bad request.
+        '401':
+          description: Authorization information is missing or invalid.
+        '404':
+          description: Not found.
+        '5XX':
+          description: Unexpected error.
+  /users/login:
+    post:
+      tags:
+      - "User"
+      summary: "특정 유저 정보 호출"
+      description: "특정 유저 정보 호출"
+      operationId: "GetUsersById"
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/json"
+      - "application/xml"
+      parameters:
+      - name: "email"
+        in: "body"
+        description: "\"email\":\"someone@kp.com\""
+        required: true
+        type: "string"
+        exmaples:
+          email: "someone@kp.com"
+      responses:
+        '200':
+          description: OK
+        '400':
+          description: Bad request.
+        '401':
+          description: Authorization information is missing or invalid.
+        '404':
+          description: Not found.
+        '5XX':
+          description: Unexpected error.
   /groups:
     get:
       tags:
@@ -48,6 +87,13 @@ paths:
       - "application/json"
       - "application/xml"
       responses:
-        200:
-          schema:
-            type: "object"
+        '200':
+          description: OK
+        '400':
+          description: Bad request.
+        '401':
+          description: Authorization information is missing or invalid.
+        '404':
+          description: Not found.
+        '5XX':
+          description: Unexpected error.

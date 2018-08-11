@@ -1,21 +1,35 @@
-const router = require('express').Router();
-var mysql = require('mysql');
-var dbconfig = require('../config/database');
-var conn = mysql.createConnection(dbconfig);
+const router = require("express").Router()
+var mysql = require("mysql")
 
-conn.connect();
+var connection = mysql.createConnection({
+  host: process.env.RDS_HOSTNAME,
+  user: process.env.RDS_USERNAME,
+  password: process.env.RDS_PASSWORD,
+  port: process.env.RDS_PORT
+})
 
-router.get('/', function(req, res){
+connection.connect(function(err) {
+  if (err) {
+    console.error("Database connection failed: " + err.stack)
+    return
+  }
 
-    conn.query("select * from users;", function(err, rows){
-        if(err){
-            console.log(err);
-            res.send(err);
-        }
+  console.log("Connected to database.")
+})
 
-        res.send(rows);
-    });
-});
+connection.end()
 
+conn.connect()
 
-module.exports = router;
+router.get("/", function(req, res) {
+  conn.query("select * from users;", function(err, rows) {
+    if (err) {
+      console.log(err)
+      res.send(err)
+    }
+
+    res.send(rows)
+  })
+})
+
+module.exports = router

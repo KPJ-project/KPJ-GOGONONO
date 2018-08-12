@@ -6,7 +6,7 @@ var app = express()
 
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument))
 
-//app.set("port", 3000)
+app.set("port", 3000)
 
 app.get("/", function(req, res) {
   res.send("GOGONONO API SERVER!")
@@ -18,6 +18,6 @@ app.use("/groups", require("./routes/groups"))
 // 유저 관련 api
 app.use("/users", require("./routes/users"))
 
-app.listen((), function() {
+app.listen(app.get("port"), function() {
   console.log("gogonono express server listening on port " + app.get("port"))
 })

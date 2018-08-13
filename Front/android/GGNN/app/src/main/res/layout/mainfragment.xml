@@ -4,6 +4,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <RelativeLayout
+        android:id="@+id/back1"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="#4caf50">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/back2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/back1"
+        android:background="#ededed">
+
+    </RelativeLayout>
+
     <ImageView
         android:id="@+id/imageView_logo"
         android:layout_width="100dp"
@@ -30,12 +47,10 @@
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/textView_logo"/>
+        android:layout_below="@+id/textView_logo" />
 
 
-
-
-    <android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <!--<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
@@ -48,7 +63,6 @@
             app:layout_widthPercent="100%">
 
 
-
         </RelativeLayout>
 
         <RelativeLayout
@@ -58,7 +72,78 @@
             app:layout_heightPercent="65%"
             app:layout_widthPercent="100%">
 
+
         </RelativeLayout>
-    </android.support.percent.PercentRelativeLayout>
+    </android.support.percent.PercentRelativeLayout>-->
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textview_1"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="#4cb050"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/meeting_code_input" />
+
+    <TextView
+        android:id="@+id/textview_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fab2"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:text="모임 가입하기"
+        android:textColor="#ffffff"
+        android:visibility="invisible" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textview_2"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="#4cb050"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/meeting_code_create" />
+
+    <TextView
+        android:id="@+id/textview_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fab"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:text="모임 생성하기"
+        android:textColor="#ffffff"
+        android:visibility="invisible" />
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="#4cb050"
+        app:srcCompat="@drawable/hamberger_button" />
+
+    <RelativeLayout
+        android:id="@+id/layout_mainfragment_transparent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00000000">
+
+    </RelativeLayout>
+
 
 </RelativeLayout>

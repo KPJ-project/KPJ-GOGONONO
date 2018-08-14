@@ -1,7 +1,7 @@
 module.exports = {
-    host: 'localhost',
-    user: 'root',
-    password: 'kpjst102!',
+    host: 'gogonono.cow90dnrnqjv.ap-northeast-2.rds.amazonaws.com',
+    user: 'swpark',
+    password: 'st1021234!',
     port: '3306',
-    database: 'gogonono_test_v3'
+    database: 'gogonono'
 };

@@ -30,7 +30,7 @@
         android:adjustViewBounds="true"
         android:background="@drawable/logo_selector"
         android:padding="5dp"
-        app:srcCompat="@drawable/logo_new" />
+        app:srcCompat="@drawable/logo" />
 
     <TextView
         android:id="@+id/textView_logo"

@@ -1,5 +1,6 @@
-package comtjoon.github.ggnn
+package kpj_group.gogonono.gogonono
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -11,16 +12,16 @@ import android.view.ViewGroup
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.TextView
-import kotlinx.android.synthetic.main.mainfragment.*
+import kotlinx.android.synthetic.main.fragment_main.*
 
 class MainFragment : Fragment() {
 
     var isFabOpen: Boolean = false
-    var fab_open:Animation?=null
-    var fab_close:Animation?=null
+    var fab_open: Animation?=null
+    var fab_close: Animation?=null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        var view = inflater.inflate(R.layout.mainfragment, container, false)
+        var view = inflater.inflate(R.layout.fragment_main, container, false)
         return view
     }
 
@@ -36,7 +37,10 @@ class MainFragment : Fragment() {
             anim()
         }
         fab_join.setOnClickListener {
-
+            startActivity(Intent(activity, JoinGroupActivity::class.java))
+        }
+        fab_create.setOnClickListener {
+            startActivity(Intent(activity,CreateGroupActivity::class.java))
         }
     }
 

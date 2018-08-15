@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/back1"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="#4caf50">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/back2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/back1"
+        android:background="#ededed">
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView_logo"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/logo_selector"
+        android:padding="5dp"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/textView_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="모임 가입하기"
+        android:textColor="#ffffff"
+        android:textSize="20dp" />
+
+    <ImageView
+        android:id="@+id/imageView_whiteBox"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_logo"
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="true"
+        app:srcCompat="@drawable/white_box" />
+
+    <TextView
+        android:id="@+id/textView_join_groupCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_logo"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="50dp"
+        android:text="모임 코드"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/editText_join_groupCode"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_join_groupCode"
+        android:layout_centerInParent="true"
+        android:hint="모임 코드 6자리를 입력하세요"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/textView_groupCode_detail1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText_join_groupCode"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="30dp"
+        android:text="모임 코드 란?"
+        android:textColor="#7a0606"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/textView_groupCode_detail2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_groupCode_detail1"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="10dp"
+        android:text="* '모임 코드 생성하기' 를 통해서 만들어진"
+        android:textColor="#7a0606"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/textView_groupCode_detail3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_groupCode_detail2"
+        android:layout_marginLeft="60dp"
+        android:text="6자리의 코드를 말합니다."
+        android:textColor="#7a0606"
+        android:textSize="15sp" />
+
+
+    <Button
+        android:id="@+id/button_join"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="300dp"
+        android:background="@drawable/button_login_selector"
+        android:text="가입하기"
+        android:textColor="#ffffff"
+        android:textSize="20dp" />
+
+
+    <!--<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/layout_1"
+            android:background="#4caf50"
+            app:layout_heightPercent="35%"
+            app:layout_widthPercent="100%">
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_2"
+            android:layout_below="@+id/layout_1"
+            android:background="#ededed"
+            app:layout_heightPercent="65%"
+            app:layout_widthPercent="100%">
+
+
+        </RelativeLayout>
+    </android.support.percent.PercentRelativeLayout>-->
+
+    <RelativeLayout
+        android:id="@+id/layout_mainfragment_transparent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00000000">
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

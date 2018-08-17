@@ -41,27 +41,22 @@ paths:
           description: Not found.
         '5XX':
           description: Unexpected error.
-  /users/login:
-    post:
+  /users/login/{email}:
+    get:
       tags:
       - "User"
-      summary: "특정 유저 정보 호출"
-      description: "특정 유저 정보 호출"
-      operationId: "GetUsersById"
-      consumes:
-      - "application/json"
-      - "application/xml"
+      summary: "로그인 시 모임 리스트 호출"
+      description: "로그인 시 모임 리스트 호출"
+      operationId: "getGroupsByEmail"
       produces:
       - "application/json"
       - "application/xml"
       parameters:
       - name: "email"
-        in: "body"
-        description: "\"email\":\"someone@kp.com\""
+        in: "path"
         required: true
+        description: "로그인 시도한 email 주소"
         type: "string"
-        exmaples:
-          email: "someone@kp.com"
       responses:
         '200':
           description: OK

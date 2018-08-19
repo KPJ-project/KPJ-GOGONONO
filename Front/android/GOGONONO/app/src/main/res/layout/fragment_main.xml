@@ -30,7 +30,7 @@
         android:adjustViewBounds="true"
         android:background="@drawable/logo_selector"
         android:padding="5dp"
-        app:srcCompat="@drawable/logo" />
+        android:src="@drawable/logo" />
 
     <TextView
         android:id="@+id/textView_logo"
@@ -86,7 +86,7 @@
         android:layout_marginRight="20dp"
         android:backgroundTint="#4cb050"
         android:visibility="invisible"
-        app:srcCompat="@drawable/meeting_code_input" />
+        android:src="@drawable/meeting_code_input" />
 
     <TextView
         android:id="@+id/textview_join"
@@ -109,7 +109,7 @@
         android:layout_marginRight="20dp"
         android:backgroundTint="#4cb050"
         android:visibility="invisible"
-        app:srcCompat="@drawable/meeting_code_create" />
+        android:src="@drawable/meeting_code_create" />
 
     <TextView
         android:id="@+id/textview_create"
@@ -135,7 +135,7 @@
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
         android:backgroundTint="#4cb050"
-        app:srcCompat="@drawable/hamberger_button" />
+        android:src="@drawable/hamberger_button" />
 
     <RelativeLayout
         android:id="@+id/layout_mainfragment_transparent"

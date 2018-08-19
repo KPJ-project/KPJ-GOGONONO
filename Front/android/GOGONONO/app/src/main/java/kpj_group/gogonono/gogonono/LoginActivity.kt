@@ -3,6 +3,7 @@ package kpj_group.gogonono.gogonono
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.util.Log
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_login.*
@@ -23,6 +24,12 @@ class LoginActivity : AppCompatActivity() {
         authStateListener = FirebaseAuth.AuthStateListener { firebaseAuth ->
             var user= firebaseAuth.currentUser
             if (user != null) {
+                user.getIdToken(true).addOnCompleteListener {
+                    if(it.isSuccessful){
+                        var idToken = it.result.token
+                        Log.d("LoginActivity token", idToken)
+                    }
+                }
                 startActivity(Intent(this, InitialLoginActivity::class.java))
             }
         }

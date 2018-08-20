@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #######################################################
 #Front
 #android
@@ -29,8 +28,6 @@ build
 *~
 *.swp
 
-=======
->>>>>>> 2a309d5f057fabc717c68048a38e30a31da3319f
 # Built application files
 *.apk
 *.ap_
@@ -96,10 +93,7 @@ fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
 fastlane/readme.md
-<<<<<<< HEAD
 #######################################################
 #Front
 #android
 #######################################################
-=======
->>>>>>> 2a309d5f057fabc717c68048a38e30a31da3319f

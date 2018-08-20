@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="true"
+    android:background="#f7f3e6"
+    tools:context=".SignUpActivity2">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <ImageView
+            android:id="@+id/imageView_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="80dp"
+            app:srcCompat="@drawable/image" />
+
+        <ImageView
+            android:id="@+id/imageView_signupbox"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="130dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/signup_box" />
+
+        <EditText
+            android:id="@+id/editText_name"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="200dp"
+            android:ems="10"
+            android:hint="이름"
+            android:inputType="textPersonName"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/editText_nickname"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText_name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:hint="닉네임"
+            android:inputType="textPersonName"
+            android:textSize="15dp" />
+
+        <Spinner
+            android:id="@+id/spinner_club"
+            style="@style/Widget.AppCompat.Spinner.Underlined"
+            android:layout_width="220dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/editText_nickname"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:spinnerMode="dialog"
+            android:textSize="15dp" />
+
+        <Spinner
+            android:id="@+id/spinner_rank"
+            style="@style/Widget.AppCompat.Spinner.Underlined"
+            android:layout_width="220dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/spinner_club"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:spinnerMode="dialog"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/button_go_register"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/imageView_signupbox"
+            android:layout_marginBottom="50dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/button_login_selector"
+            android:text="가입하기"
+            android:textColor="#ffffff"
+            android:textSize="20dp" />
+
+    </RelativeLayout>
+
+
+</ScrollView>

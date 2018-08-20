@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "957326590127",
+    "firebase_url": "https://gogonono-80cd5.firebaseio.com",
+    "project_id": "gogonono-80cd5",
+    "storage_bucket": "gogonono-80cd5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:957326590127:android:95ed676f88e98e3a",
+        "android_client_info": {
+          "package_name": "kpj_group.gogonono.gogonono"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "957326590127-r8911afsvgqgjske97ledbaqlmm41kmi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "kpj_group.gogonono.gogonono",
+            "certificate_hash": "8e2a86347fed9b475dd12d20f6a2b22b67fd5919"
+          }
+        },
+        {
+          "client_id": "957326590127-srq59hspo8hv6kha9mmesj57isfur16s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBO1W9kyJ1D_n89DqGPLzzKYPHnAQD_4Z4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "957326590127-srq59hspo8hv6kha9mmesj57isfur16s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
